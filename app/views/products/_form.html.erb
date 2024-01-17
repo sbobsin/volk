@@ -17,8 +17,13 @@
   </div>
 
   <div>
-    <%= form.label :price, style: "display: block" %>
-    <%= form.number_field :price %>
+    <%= form.label :stripe_pmt_link, style: "display: block" %>
+    <%= form.text_field :stripe_pmt_link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :images, 'Product Images' %>
+    <%= form.file_field :images, multiple: true %>
   </div>
 
   <div>
