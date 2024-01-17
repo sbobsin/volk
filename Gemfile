@@ -46,6 +46,9 @@ gem "bootsnap", require: false
 gem 'bootstrap', '~> 4.1.3'
 gem 'bootstrap4-select-rails'
 gem 'bootstrap_form', '>= 4.0.0'
+gem 'stripe'
+gem 'dotenv-rails', groups: [:development, :test]
+
 
 # Use Sass to process CSS
 # gem "sassc-rails"
