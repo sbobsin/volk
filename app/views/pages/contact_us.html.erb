@@ -1,8 +1,7 @@
 
-<div class="container">
-<div class="row">
-<div class="col">
-  <div class="container mt-4">
+<div class="container col-6 volk-gold-border">
+
+  <div class="container mt-4 py-4">
     <h1 class="text-center">Contact Us</h1><br/>
     <p class="text-center">Have a question or comment for us?</p>
   </div>
@@ -11,11 +10,11 @@
     <div class="row">
       <div class="col mb-3">
         <label for="contactUsFormFirstName" class="form-label">First Name</label>
-        <input type="text" class="form-control" id="contactUsFormFirstName" name="first_name" placeholder="i.e. John">
+        <input type="text" class="form-control" id="contactUsFormFirstName" name="first_name">
       </div>
       <div class="col mb-3">
         <label for="contactUsFormLastName" class="form-label">Last Name</label>
-        <input type="text" class="form-control" id="contactUsFormLastName" name="last_name" placeholder="i.e. Doe">
+        <input type="text" class="form-control" id="contactUsFormLastName" name="last_name">
       </div>
     </div>
     <!-- Email Address -->
@@ -29,40 +28,6 @@
       <textarea class="form-control" id="contactUsFormMessage" name="message" rows="3" required></textarea>
     </div>
     <!-- Submit Button -->
-    <button type="submit" class="btn btn-lg volk-gold full-width">Submit</button>
+    <button type="submit" class="btn btn-lg volk-gold full-width mb-4">Submit</button>
   </form>
-  </div>
-
-<div class="col">
-    <div class="container mt-4">
-      <h1 class="text-center">Sponsorship</h1><br/>
-      <p class="text-center">Interested in getting Sponsored? Let us know</p>
-    </div>
-    <form action="<%= contact_us_submit_path %>" method="post">
-      <!-- First Name and Last Name -->
-      <div class="row">
-        <div class="col mb-3">
-          <label for="contactUsFormFirstName" class="form-label">First Name</label>
-          <input type="text" class="form-control" id="contactUsFormFirstName" name="first_name" placeholder="i.e. John">
-        </div>
-        <div class="col mb-3">
-          <label for="contactUsFormLastName" class="form-label">Last Name</label>
-          <input type="text" class="form-control" id="contactUsFormLastName" name="last_name" placeholder="i.e. Doe">
-        </div>
-      </div>
-      <!-- Email Address -->
-      <div class="mb-3">
-        <label for="contactUsFormEmail" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="contactUsFormEmail" name="email" placeholder="name@example.com">
-      </div>
-      <!-- Comment or Question -->
-      <div class="mb-3">
-        <label for="contactUsFormMessage" class="form-label">What do you want us to know?</label>
-        <textarea class="form-control" id="contactUsFormMessage" name="message" rows="3" required></textarea>
-      </div>
-      <!-- Submit Button -->
-      <button type="submit" class="btn btn-lg bg-dark text-white full-width">Submit</button>
-    </form>
-  </div>
-  </div>
 </div>

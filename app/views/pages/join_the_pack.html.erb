@@ -1,46 +1,96 @@
-<div class="container">
+<div class="container my-4 volk-gold-border">
   <div class="row">
     <div class="col">
       <div class="container mt-4">
         <h1 class="text-center">
           <%= image_tag("black_volk.png", style: "width: 10%;") %>
-            JOIN THE PACK
-            <%= image_tag("black_volk.png", style: "width: 10%;") %>
-          </h1>
-        <br/>
-      <p class="text-center volk-gold">Help us share the news about Volk and unlock rewards! Complete the form below, and we'll reach out to you soon.</p>
-      <hr>
-      <h3 class=text-center>Team Volk Application</h3>
-      <hr>
-      <form action="<%= contact_us_submit_path %>" method="post">
-        <!-- First Name and Last Name -->
-        <div class="row">
-          <div class="col mb-3">
-            <label for="applicationFirstName" class="form-label">First Name</label>
-            <input type="text" class="form-control" id="applicationFirstName" name="first_name" placeholder="i.e. John">
+          JOIN THE PACK
+          <%= image_tag("black_volk.png", style: "width: 10%;") %>
+        </h1>
+        <hr>
+        <!-- <h5 class="text-center volk-gold py-3">Help us share the news about Volk and unlock rewards! Complete the form below, and we'll reach out to you soon.</h5>-->
+        <h3 class=text-center>Team Volk Application</h3>
+        <hr>
+        <form action="<%= team_volk_application_submitted_path %>" method="post">
+          <div class=" container volk-gold my-4 py-1"><h4>Name and Contact Info</h4></div>
+          <!-- First Name and Last Name -->
+          <div class="row">
+            <div class="col mb-3">
+              <label for="applicationFirstName" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="applicationFirstName" name="first_name" required>
+            </div>
+            <div class="col mb-3">
+              <label for="applicationLastName" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="applicationLastName" name="last_name" required>
+            </div>
           </div>
-          <div class="col mb-3">
-            <label for="applicationLastName" class="form-label">Last Name</label>
-            <input type="text" class="form-control" id="applicationLastName" name="last_name" placeholder="i.e. Doe">
+          <div class="row">
+            <div class="col mb-3">
+              <label for="applicationFormEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="applicationFormEmail" name="email" required>
+            </div>
+            <div class="col mb-3">
+              <label for="applicationFormPhone" class="form-label">Phone</label>
+              <input type="phone" class="form-control" id="applicationFormPhone" name="phone" placeholder="i.e. 555-555-5555" required>
+            </div>
           </div>
-        </div>
-          <div class="col mb-3">
-            <label for="contactUsFormLastName" class="form-label">Last Name</label>
-            <input type="text" class="form-control" id="contactUsFormLastName" name="last_name" placeholder="i.e. Doe">
+          <!--Address -->
+          <div class=" container volk-gold my-4 py-1"><h4>Address</h4></div>
+          <div class="mb-3">
+            <label for="applicationFormStreet" class="form-label">Street</label>
+            <input type="text" class="form-control" id="applicationFormAddress" name="street">
           </div>
-        <!-- Email Address -->
-        <div class="mb-3">
-          <label for="contactUsFormEmail" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="contactUsFormEmail" name="email" placeholder="name@example.com">
-        </div>
-        <!-- Comment or Question -->
-        <div class="mb-3">
-          <label for="contactUsFormMessage" class="form-label">Please enter your message or question</label>
-          <textarea class="form-control" id="contactUsFormMessage" name="message" rows="3" required></textarea>
-        </div>
-        <!-- Submit Button -->
-        <button type="submit" class="btn btn-lg volk-gold full-width">Submit</button>
-      </form>
-    </div>
+          <div class="row">
+            <div class="col form-group pl-2 pr-2">
+              <label for="applicationFormCity" class="form-label">City</label>
+              <input type="text" class="form-control" id="applicationFormCity" name="city">
+            </div>
+            <div class="col form-group pl-2 pr-2">
+              <label for="applicationFormState" class="form-label">State</label>
+              <input type="text" class="form-control" id="applicationFormState" name="state">
+            </div>
+            <div class="col form-group pl-2 pr-2">
+              <label for="applicationFormZip" class="form-label">Zip</label>
+              <input type="text" class="form-control" id="applicationFormZip" name="zip">
+            </div>
+          </div>
+          <div class=" container volk-gold my-4 py-1">
+            <h4>Tell Us About Yourself</h4>
+          </div>
+          <!--Question 1-->
+          <div class="my-3">
+            <label for="applicationFomrQ1" class="form-label">Please describe the ways you currently participate in the pickleball community.*</label>
+            <textarea class="form-control" id="applicationFomrQ1" name="q1" rows="3" required></textarea>
+          </div>
+          <!--Question 2-->
+          <div class="my-3">
+            <label for="applicationFomrQ2" class="form-label">How do you plan on spreading the word about Volk? Please be as specific as possible.*</label>
+            <textarea class="form-control" id="applicationFomrQ2" name="q2" rows="3" required></textarea>
+          </div>
+          <!--Question 3-->
+          <div class="my-3">
+            <label for="applicationFomrQ3" class="form-label">Please provide your social media links (e.g., Instagram, TikTok, Facebook, Youtube, etc.)</label>
+            <textarea class="form-control" id="applicationFomrQ3" name="q3" rows="3" required></textarea>
+          </div>
+          <!--Question 2-->
+          <div class="my-3">
+            <label for="applicationFomrQ4" class="form-label">What is your UTPR ranking or DUPR rating?</label>
+            <input type="text" class="form-control" id="applicationFomrQ4" name="q4" required>
+          </div>
+          <!--Question 2-->
+          <div class="my-3">
+            <label for="applicationFomrQ5" class="form-label">What paddle do you currently use?*</label>
+            <input type="text" class="form-control" id="applicationFomrQ5" name="q5" required>
+          </div>
+          <!--Question 2-->
+          <div class="my-3">
+            <label for="applicationFomrQ6" class="form-label">Anything else you would like us to know?</label>
+            <textarea class="form-control" id="applicationFomrQ6" name="q6" rows="3"></textarea>
+          </div>
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-lg volk-gold full-width mb-2">Submit</button>
+        </form>
+      </div>
+      </div>
   </div>
 </div></div>

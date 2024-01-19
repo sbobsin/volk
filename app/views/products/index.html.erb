@@ -1,4 +1,5 @@
 <p style="color: green"><%= notice %></p>
+<hr>  
 <h1 class="text-center">Paddles</h1>
 <hr>  
 <div class="container my-4">
@@ -11,7 +12,8 @@
               <%= image_tag image, size: '350x450' %>
             <% end %>
             
-            <h5 class="card-title"><%= product.name %></h5>
+            <h5 class="card-title mt-4"><%= product.name %></h5>
+            <h5 class="card-title mt-4"><%= number_to_currency(product.price) %></h5>
             <p class="card-text"></p>
             <%= link_to "Buy Now", product.stripe_pmt_link, class:"btn full-width volk-gold", target:"blank" %>
           </div>
