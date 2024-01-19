@@ -11,7 +11,6 @@
             <% product&.images&.each do |image| %>
               <%= image_tag image, size: '350x450' %>
             <% end %>
-            
             <h5 class="card-title mt-4"><%= product.name %></h5>
             <h5 class="card-title mt-4"><%= number_to_currency(product.price) %></h5>
             <p class="card-text"></p>
