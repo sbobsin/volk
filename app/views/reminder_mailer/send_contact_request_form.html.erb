@@ -1,6 +1,38 @@
-<div class="container">
-  <h1>New Contact Request From <%= @name %></h1>
-  <p><%= @name %> sent you the following message through your contact request form:</p>
-  <p><%= @message %></p>
-  <p>You can reach out to them at <a href="mailto:example@example.com", target="_blank"><%= @email %></a></p>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* Inline CSS for centering and minimum height */
+  body {
+    background-color: #f0f0f0;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .card {
+    width: 18rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    min-height: 50vh; /* 50% of the viewport height */
+    min-width: 100vh; /* 50% of the viewport height */
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <hr>
+    <h5 style="font-size: 20px; color: #333;">Info Request From <%= @full_name %></h5>
+    <hr>
+    <h4 class="mb-0 pb-0"><u>Here is what they said:</u></h4> 
+    <p><%= @message %></p>    
+    <h4 class="mb-0 pb-0" style="margin-bottom: 5px;"><u>Contact Info</u></h4>
+    Email: <a href="mailto:example@example.com" target="_blank"><%= @email %></a><br/>
+    Phone: <a href="tel:<%= @phone %>"><%= @phone %></a>
+  </div>
+</body>
+</html>

@@ -1,14 +1,72 @@
-<%= @first_name %>
-<%= @last_name %>
-<%= @email %>
-<%= @phone %>
-<%= @street %>
-<%= @city %>
-<%= @state %>
-<%= @zip %>
-<%= @q1 %>
-<%= @q2 %>
-<%= @q3 %>
-<%= @q4 %>
-<%= @q5 %>
-<%= @q6 %>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* Inline CSS for centering and minimum height */
+  body {
+    background-color: #f0f0f0;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .card {
+    width: 18rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    min-height: 50vh; /* 50% of the viewport height */
+    min-width: 100vh; /* 50% of the viewport height */
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="container" style="text-align: center;">
+      <hr>
+      <h5 style="font-size: 20px; color: #333;">Team Volk Application: <%= @full_name %></h5>
+      <hr>  
+    </div>
+    <h4 class="mb-0 pb-0" style="margin-bottom: 5px;"><u>Contact Info</u></h4>
+    First Name: <%= @first_name&.capitalize %><br/>
+    Last Name: <%= @last_name&.capitalize %><br/><br/>
+    Address: <%= @full_address %><br/>
+    Phone: <a href="tel:<%= @phone %>"><%= @phone %></a><br/>
+    Email: <a href="mailto:example@example.com" target="_blank"><%= @email %></a><br/>
+    <h4 class="mb-0 pb-0" style="margin-bottom: 5px;"><u>Application Question Responses</u></h4>
+    <div style="margin-left:10px" class="container">
+      <p><b>Q1-Please describe the ways you currently participate in the pickleball community.</b></p>
+      <p style="margin-left: 15px;"><b>Answer:</b> <%= @q1 %></p>
+    </div>
+
+    <div style="margin-left: 10px;" class="container">
+      <p><b>Q2-How do you plan on spreading the word about Volk? Please be as specific as possible.*</b></p>
+      <p style="margin-left: 15px;"><b>Answer:</b> <%= @q2 %></p>
+    </div>
+
+    <div style="margin-left: 10px;" class="container">
+      <p><b>Q3-Please provide your social media links (e.g., Instagram, TikTok, Facebook, Youtube, etc.)</b></p>
+      <p style="margin-left: 15px;"><b>Answer:</b> <%= @q3 %></p>
+    </div>
+
+    <div style="margin-left: 10px;" class="container">
+      <p><b>Q4-What is your UTPR ranking or DUPR rating?</b></p>
+      <p style="margin-left: 15px;"><b>Answer:</b> <%= @q4 %></p>
+    </div>
+
+    <div style="margin-left: 10px;" class="container">
+      <p><b>Q5-What paddle do you currently use?</b></p>
+      <p style="margin-left: 15px;"><b>Answer:</b> <%= @q5 %></p>
+    </div>
+
+    <div style="margin-left: 10px;" class="container">
+      <p><b>Q6-Anything else you would like us to know?</b></p>
+      <p style="margin-left: 15px;"><b>Answer:</b> <%= @q6 %></p>
+    </div>
+
+  </div>
+</body>
+</html>

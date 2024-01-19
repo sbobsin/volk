@@ -47,12 +47,14 @@ class PagesController < ApplicationController
   def contact_us_submit
     # This action handles the form submission
     # Access form parameters from params and process them as needed
-    name = params[:name]
+    first_name = params[:first_name]
+    last_name = params[:last_name]
     email = params[:email]
+    phone = params[:phone]
     subject = params[:subject]
     message = params[:message]
     # Process the form data, e.g., sending an email
-    ReminderMailer.with(name: name, email: email, subject: subject, message: message).send_contact_request_form.deliver_later
+    ReminderMailer.with(first_name: first_name, last_name: last_name, email: email, phone: phone, subject: subject, message: message).send_contact_request_form.deliver_later
 
     # Redirect or render as needed
     redirect_to contact_us_page_path, notice: 'Your message has been sent successfully!'
