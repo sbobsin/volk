@@ -1,31 +1,22 @@
 <p style="color: green"><%= notice %></p>
-
-<h1>Products</h1>
-
+<h1 class="text-center">Paddles</h1>
+<hr>  
+<div class="container my-4">
+  <div class="row">
+    <% @products.each do |product| %>
+      <div class="col-md-4">
+        <div class="card" style="width: 385px;">
+          <div class="card-body">
+            <% product&.images&.each do |image| %>
+              <%= image_tag image, size: '350x450' %>
+            <% end %>
+            
+            <h5 class="card-title"><%= product.name %></h5>
+            <p class="card-text"></p>
+            <%= link_to "Buy Now", product.stripe_pmt_link, class:"btn full-width volk-gold", target:"blank" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Product</th>
-      <th scope="col">Price</th>
-      <th scope="col">Payment</th>
-      <th scope="col">Edit</th>
-    </tr>
-  </thead>
-  <tbody>
-  <% @products.each do |product| %>
-    <tr>
-      <td><%= product.name %></td>
-      <td><%= product.price %></td>
-      <td>
-      <% product.images.each do |image| %>
-  <%= image_tag image, data: { lightbox: 'product-images' } %>
-<% end %>
-
-      </td>
-      <td><%= link_to "Buy Now!", product.stripe_pmt_link, target: "blank"  %></td>
-      <td><%= link_to "Edit", edit_product_path(product) %></td>
-    </tr>
-  <% end %>
-  </tbody>
-</table>

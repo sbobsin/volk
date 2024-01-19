@@ -1,1 +1,46 @@
-I want in the pack!
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="container mt-4">
+        <h1 class="text-center">
+          <%= image_tag("black_volk.png", style: "width: 10%;") %>
+            JOIN THE PACK
+            <%= image_tag("black_volk.png", style: "width: 10%;") %>
+          </h1>
+        <br/>
+      <p class="text-center volk-gold">Help us share the news about Volk and unlock rewards! Complete the form below, and we'll reach out to you soon.</p>
+      <hr>
+      <h3 class=text-center>Team Volk Application</h3>
+      <hr>
+      <form action="<%= contact_us_submit_path %>" method="post">
+        <!-- First Name and Last Name -->
+        <div class="row">
+          <div class="col mb-3">
+            <label for="contactUsFormFirstName" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="contactUsFormFirstName" name="first_name" placeholder="i.e. John">
+          </div>
+          <div class="col mb-3">
+            <label for="contactUsFormLastName" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="contactUsFormLastName" name="last_name" placeholder="i.e. Doe">
+          </div>
+        </div>
+          <div class="col mb-3">
+            <label for="contactUsFormLastName" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="contactUsFormLastName" name="last_name" placeholder="i.e. Doe">
+          </div>
+        <!-- Email Address -->
+        <div class="mb-3">
+          <label for="contactUsFormEmail" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="contactUsFormEmail" name="email" placeholder="name@example.com">
+        </div>
+        <!-- Comment or Question -->
+        <div class="mb-3">
+          <label for="contactUsFormMessage" class="form-label">Please enter your message or question</label>
+          <textarea class="form-control" id="contactUsFormMessage" name="message" rows="3" required></textarea>
+        </div>
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-lg volk-gold full-width">Submit</button>
+      </form>
+    </div>
+  </div>
+</div></div>

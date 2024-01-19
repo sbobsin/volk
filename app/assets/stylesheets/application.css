@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+ .full-width{
+  width: 100%
+ }
+
+ .navbar-nav .nav-link {
+  color: white !important;
+}
+
+ .volk-gold{
+  background-color:#82816d;
+  color: white
+ }
