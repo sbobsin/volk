@@ -49,6 +49,8 @@ gem 'bootstrap_form', '>= 4.0.0'
 gem 'stripe'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'pg'
+gem 'aws-sdk-s3', require: false
+
 
 # Use Sass to process CSS
 # gem "sassc-rails"
