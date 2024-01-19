@@ -1,10 +1,25 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @product %>
-
+<!-- app/views/products/show.html.erb -->
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6">
+      <!-- Display the product image -->
+      <% @product.images.each do |image| %>
+      <img src="<%= url_for(image) %>" class="img-fluid" alt="<%= @product.name %>" />
+      <% end %>
+    </div>
+    <div class="col-md-6">
+      <!-- Product details -->
+      <h1><%= @product.name %></h1>
+      <p><strong>Price:</strong> $<%= number_to_currency(@product.price, precision: 2) %></p>
+      <strong>Description:</strong>
+      <%= @product&.description %>
+      <!-- Add more product details as needed -->
+    </div>
+  </div>
+</div>
 <div>
-  <%= link_to "Edit this product", edit_product_path(@product) %> |
-  <%= link_to "Back to products", products_path %>
+  <%#= link_to "Edit this product", edit_product_path(@product) %> |
+  <%= link_to "Back to all Paddles", products_path %>
 
   <%= button_to "Destroy this product", @product, method: :delete %>
 </div>

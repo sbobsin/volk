@@ -15,6 +15,7 @@
             <h5 class="card-title mt-4"><%= number_to_currency(product.price) %></h5>
             <p class="card-text"></p>
             <%= link_to "Buy Now", product.stripe_pmt_link, class:"btn full-width volk-gold", target:"blank" %>
+            <%= link_to "View Details", product_path(product), class:"btn full-width volk-black mt-2", target:"blank" %>
           </div>
         </div>
       </div>
