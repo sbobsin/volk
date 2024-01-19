@@ -5,7 +5,12 @@ class ReminderMailer < ApplicationMailer
     @subject = params[:subject]
     @message = params[:message]
 
-    mail(to: "scottbobsin@volk.com", subject:  "#{@subject}")
+    recipients = ["scottbobsin@gmail.com", "kiril999@icloud.com"]
+    subject = "Team Volk Application: #{@first_name} #{@last_name}"
+    
+    mail(to: recipients, subject: subject) do |format|
+      format.html
+    end  
   end
   
   def team_volk_application_submitted
@@ -24,7 +29,11 @@ class ReminderMailer < ApplicationMailer
     @q5 = params[:q5]
     @q6 = params[:q6]
 
-    mail(to: "scottbobsin@volk.com", subject:  "Team Volk Application: #{@first_name} #{@last_name}")
+    recipients = ["scottbobsin@gmail.com", "kiril999@icloud.com"]
+    subject = "Team Volk Application: #{@first_name} #{@last_name}"
+    
+    mail(to: recipients, subject: subject) do |format|
+      format.html
+    end
   end
-
 end
