@@ -180,6 +180,7 @@ GEM
     parser (3.3.0.4)
       ast (~> 2.4.1)
       racc
+    pg (1.5.4)
     popper_js (1.16.1)
     psych (5.1.2)
       stringio
@@ -322,6 +323,7 @@ DEPENDENCIES
   jbuilder
   letter_opener
   listen (~> 3.3)
+  pg
   puma (~> 5.0)
   rack-mini-profiler
   rails (~> 7.0.4)

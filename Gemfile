@@ -48,7 +48,7 @@ gem 'bootstrap4-select-rails'
 gem 'bootstrap_form', '>= 4.0.0'
 gem 'stripe'
 gem 'dotenv-rails', groups: [:development, :test]
-
+gem 'pg'
 
 # Use Sass to process CSS
 # gem "sassc-rails"
@@ -85,3 +85,9 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+group :production do
+  gem 'pg'
+end
+
+
