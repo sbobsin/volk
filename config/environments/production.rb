@@ -16,6 +16,17 @@ Rails.application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
+  config.active_storage.service = :amazon # Or :google or :other
+  config.active_storage.service_configurations = {
+    amazon: {
+      service: 'S3',
+      access_key_id: 'AWS_ACCESS_KEY_ID',
+      secret_access_key: 'AWS_SECRET_ACCESS_KEY',
+      bucket: 'your-bucket-name',
+    },
+  }
+
+
   config.paperclip_defaults = {
     storage: :s3,
     s3_credentials: {
