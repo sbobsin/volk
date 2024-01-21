@@ -47,7 +47,7 @@ gem 'bootstrap', '~> 4.1.3'
 gem 'bootstrap4-select-rails'
 gem 'bootstrap_form', '>= 4.0.0'
 gem 'stripe'
-gem 'dotenv-rails', groups: [:development, :test]
+gem 'dotenv-rails', groups: [:development, :test, :production]
 gem 'pg'
 gem 'aws-sdk-s3', require: false
 
